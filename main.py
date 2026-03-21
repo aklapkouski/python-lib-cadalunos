@@ -15,3 +15,4 @@ inserir_registro(nome,n1,n2)
 for aluno in listar_registros():
     print(aluno)
 
+
