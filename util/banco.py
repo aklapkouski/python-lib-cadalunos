@@ -13,7 +13,13 @@ def criar_tabela():
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             nome TEXT,
             nota1 REAL,
-            nota2 REAL
+            nota2 REAL,
+            rua TEXT,
+            bairro TEXT,
+            cidade TEXT,
+            estado TEXT,
+            numero_endereco TEXT,
+            cep TEXT
         )
 
         """
@@ -29,9 +35,9 @@ def inserir_registro(nome, n1,n2):
 
     cursor.execute(
         """
-         INSERT INTO alunos (nome, nota1, nota2)
-         VALUES(?,?,?)
-        """,(nome,n1,n2)
+         INSERT INTO alunos (nome, nota1, nota2,rua,bairro,cidade,estado,numero_endereco,cep)
+         VALUES(?,?,?,?,?,?,?,?,?)
+        """,(nome,n1,n2,rua,bairro,cidade,estado,numero_endereco,cep)
     )
 
     conn.commit()
